@@ -1,0 +1,5 @@
+function [edge_distance_map]=edge_level_plane(theta, lattice_spacing, x_o, y_o, X,Y) 
+    %d=lattice_spacing
+    %x_o, y_o = coordinates of lattice translation from origin
+    edge_distance_map = d/2*sin(pi/d*(cos(theta)*(X-x_o)+sin(theta)*(Y-y_o))); %max distance to nearest vertex of equilateral triangle with length d is d/2 for points along an edge.
+end
