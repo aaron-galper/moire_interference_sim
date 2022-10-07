@@ -1,12 +1,9 @@
 function [nearest_center, central_peak]=get_nearest_center(X, Y, superlattice, last_center)
     [peaks, indices, widths, prominences] = findpeaks(superlattice(:));
-%      while size(I)>1
-%         I=peaks>(max(peaks)-0.05);
-%         widths=widths(I);
-%         X=X(indices(I));
-%         Y=Y(indices(I));
-%     end
-    I=peaks>(max(peaks)-0.05);
+    I=peaks;
+    while size(I)>1
+        I=peaks>(max(peaks)-0.05);
+    end
 %     disp(I)
     peaks=peaks(I);
     widths=widths(I);
@@ -26,8 +23,8 @@ function [nearest_center, central_peak]=get_nearest_center(X, Y, superlattice, l
     [n_central_peak, i] = max(npeaks);
     nearest_center = [X(i) Y(i)];
     disp([X(i) Y(i) peaks(i)]);
-%     disp([X(i+1) Y(i+1) peaks(i+1)]);
-%     disp([X(i-1) Y(i-1) peaks(i-1)]);
+    disp([X(i+1) Y(i+1) peaks(i+1)]);
+    disp([X(i-1) Y(i-1) peaks(i-1)]);
     central_peak=peaks(i);
     disp('nearest center')
     disp(nearest_center)
