@@ -3,7 +3,7 @@ function plot_superlattice_interference(axes, X, Y, superlattice, center_resolut
     surf(axes, X,Y,superlattice);
     disp('minview')
     disp(minview)
-    zlim(axes, [minview, 2]);
+    zlim(axes, [minview, peak]);
     view(axes, 0, 90);
     colormap(axes, "turbo");
     

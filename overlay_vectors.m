@@ -27,7 +27,7 @@ function overlay_vectors(axes, center, last_center, x_o, y_o, misorientation, pe
     ml_spacing=1/2*sqrt(3*ml_param^2+1);
     disp('ml_spacing')
     disp(ml_spacing)
-    quiver3(axes, 0, 0,peak, ml_spacing,0,0, 'r', 'DisplayName','metalattice spacing');
+    quiver3(axes, center_v(1), center_v(2),peak, ml_spacing,0,0, 'r', 'DisplayName','metalattice spacing', LineWidth=2);
     legend(axes, '', 'Nearest Center','last center','center movement', 'ml param','Location','south');
 
 %     legend(axes, '','Translation','Misorientation','Nearest Center','last center','center movement','Location','south')
