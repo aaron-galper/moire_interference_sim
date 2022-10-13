@@ -1,13 +1,9 @@
-function plot_superlattice_interference(axes, X, Y, superlattice, center_resolution, peak)
-    minview = peak-center_resolution;
+function plot_superlattice_interference(axes, X, Y, superlattice, peak)
+    minview=0;
     surf(axes, X,Y,superlattice);
-    disp('minview')
-    disp(minview)
     zlim(axes, [minview, peak]);
     view(axes, 0, 90);
     colormap(axes, "turbo");
-    
-     
 end
 
 
