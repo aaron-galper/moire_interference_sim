@@ -3,9 +3,19 @@ function plot_superlattice_interference(axes, X, Y, superlattice, peak)
     surf(axes, X,Y,superlattice);
     zlim(axes, [minview, peak]);
     view(axes, 0, 90);
-    colormap(axes, "turbo");
+    colormap(axes, get_bwscale());
 end
 
+function bwscale=get_bwscale()
+bwscale=[0 0 0
+0 0 0
+0 0 0
+0.2 0.2 0.2
+0.3 0.3 0.3
+0.5 0.5 0.5
+0.75 0.75 0.75
+1 1 1];
+end
 
 % function plot_superlattice_interference(axes, X, Y, superlattice)
 %     subplot(1,2,1, axes);

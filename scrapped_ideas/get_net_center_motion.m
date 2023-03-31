@@ -1,7 +1,7 @@
 function get_net_center_motion(X, Y, superlattice, ml_param, misorientation, x_shift, y_shift)
     x_o=0;
     y_o=0;
-    
+
 
 
     k=boundary(X(:), Y(:));

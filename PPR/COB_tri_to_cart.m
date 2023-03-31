@@ -1,0 +1,6 @@
+function cartesian=COB_tri_to_cart(cartesian)
+    cartesian=1/(3/sqrt(2))...
+        *[3/sqrt(2) -1/2
+          0 1]...
+        *cartesian;
+end
